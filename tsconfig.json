@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "CommonJS",
+    "lib": ["ES2021", "DOM"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "outDir": "dist"
+  },
+  "include": ["src", "tests", "playwright.config.ts"]
+}
+
+//"strict": true — el modo estricto de TypeScript. Es la decisión clave: obliga a manejar bien los tipos y null/undefined, y atrapa muchísimos errores antes de correr. En una entrega técnica, tenerlo en true demuestra buenas prácticas.
+//"noUnusedLocals" / "noUnusedParameters" — te avisa si dejaste una variable o parámetro sin usar (código muerto). Ayuda a mantener todo limpio.
+//"include" — le dice a TypeScript que revise las carpetas src y tests (que vamos a crear ya) y el archivo de config de Playwright.
